@@ -5,7 +5,7 @@ cookies = ""
 # 保存当前目录下文件夹名
 save_dir = "東方Project10000users入り"
 # 开始url
-params = "?s_mode=s_tag_full&word=%E6%9D%B1%E6%96%B9Project10000users%E5%85%A5%E3%82%8A"
+params = "?s_mode=s_tag_full&word=" + save_dir
 start_url = "https://www.pixiv.net/search.php" + params
 
 
