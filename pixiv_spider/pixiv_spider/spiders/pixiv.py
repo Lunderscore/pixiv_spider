@@ -66,8 +66,8 @@ class PixivSpider(scrapy.Spider):
             # 如果没有该失败记录 则添加
             with open(save_dir+"/failure.txt", "a+") as f:
                 f.seek(0)
-                if not response.url+"\n" in f.readlines():
-                    mid = response.url[response.url.rindex("/")+1:response.url.rindex("_")]
+                mid = response.url[response.url.rindex("/")+1:response.url.rindex("_")]
+                if not mid+"\n" in f.readlines():
                     f.write(mid + "\n")
             return
         # 切换后缀名
