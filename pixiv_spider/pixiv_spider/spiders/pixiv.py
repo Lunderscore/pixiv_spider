@@ -67,7 +67,8 @@ class PixivSpider(scrapy.Spider):
             with open(save_dir+"/failure.txt", "a+") as f:
                 f.seek(0)
                 if not response.url+"\n" in f.readlines():
-                    f.write(response.url + "\n")
+                    mid = response.url[response.url.rindex("/")+1:response.url.rindex("_")]
+                    f.write(mid + "\n")
             return
         # 切换后缀名
         else:
